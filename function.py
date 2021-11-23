@@ -19,14 +19,14 @@ def tambah_kontak():
     return kontak
 
 def hapus_kontak(daftar_kontak):
-    telepon_dicari = input("No telepon yang akan dihapus : ")
+    telepon = input("No telepon yang akan dihapus : ")
 
     index = -1
 
 
     for i in range(0, len(daftar_kontak)):
         kontak = daftar_kontak[i]
-        if telepon_dicari == daftar_kontak["telepon"]:
+        if telepon == kontak["telepon"]:
             index = i
             break
 
@@ -34,7 +34,7 @@ def hapus_kontak(daftar_kontak):
         print("Data Kontak tidak ditemukan")
     else:
         del daftar_kontak[index]
-        print("Data ditemukan")
+        print("Data berhasil dihapus")
 
 def cari_kontak(daftar_kontak):
     nama_yg_dicari = input("Nama yang dicari : ")
